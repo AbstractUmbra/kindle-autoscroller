@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "Kindle Scroller",
+    "description": "does something that should already exist.",
+    "version": "0.1.0",
+    "author": "AbstractUmbra",
+    "browser_action": {
+        "default_icon": "icons/icon-48.png"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "js/index.js"
+            ],
+            "matches": [
+                "*://read.amazon.co.uk/*"
+            ]
+        }
+    ],
+    "permissions": [
+        "<all_urls>",
+        "storage",
+        "activeTab",
+        "tabs"
+    ],
+    "background": {
+        "scripts": [
+            "js/back.js"
+        ],
+        "persistent": false
+    }
+}
